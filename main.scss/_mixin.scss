@@ -1,6 +1,12 @@
-@mixin flex ($justify:space-between, $gap) {
-    display: flex;
-    justify-content: $justify;
-    align-items: center;
-    gap: $gap;
+@mixin flex($justify: space-between, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  gap: $gap;
+}
+@mixin btn {
+  font-size: $fss;
+  color: $primary;
+  font-weight: $fwgh;
+  letter-spacing: 2px;
 }

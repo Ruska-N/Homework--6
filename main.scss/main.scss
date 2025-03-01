@@ -2,14 +2,36 @@
 @import "./reset";
 @import "./variables";
 
+a {
+  text-decoration: none;
+  color: $bgblack;
+}
+.head {
+  padding: 28px 165px;
+}
 .header {
-    @include flex;
+  @include flex($gap: 260px);
 
-    &__logo {
-        width: 169px;
+  &__logo {
+    width: 169px;
+  }
+
+  &__btn {
+    background-color: $bgblack;
+    padding: 12px 24px;
+
+    &--btn {
+      @include btn;
     }
+  }
 }
 
+.nav {
+  @include flex($gap: 37px);
+  color: $bgblack;
+  font-size: $fss;
+  font-weight: $fwgh
+}
 
 .cont {
   @include flex;
@@ -23,19 +45,18 @@
     &--title {
       font-size: $fslg;
       font-weight: $fwgh;
+      line-height: 48PX;
     }
 
     &--text {
       font-size: $fsm;
       margin-top: 21px;
       margin-bottom: 48px;
+      line-height: 25PX
     }
 
     &--btn {
-      font-size: $fss;
-      text-decoration: none;
-      color: $primary;
-      font-weight: $fwgh;
+      @include btn;
     }
   }
 
