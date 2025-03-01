@@ -1,3 +1,50 @@
-@import './mixin';
-@import './reset';
-@import './variables';
+@import "./mixin";
+@import "./reset";
+@import "./variables";
+
+.header {
+    @include flex;
+
+    &__logo {
+        width: 169px;
+    }
+}
+
+
+.cont {
+  @include flex;
+  background-color: $bgblack;
+
+  &__left {
+    width: 387px;
+    color: $primary;
+    margin: 0 auto;
+
+    &--title {
+      font-size: $fslg;
+      font-weight: $fwgh;
+    }
+
+    &--text {
+      font-size: $fsm;
+      margin-top: 21px;
+      margin-bottom: 48px;
+    }
+
+    &--btn {
+      font-size: $fss;
+      text-decoration: none;
+      color: $primary;
+      font-weight: $fwgh;
+    }
+  }
+
+  &__right {
+    width: 830px;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
